@@ -1,7 +1,9 @@
 from flask import Flask, jsonify
 import math
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)  # Allow all origins (for testing, adjust for production later)
 
 # San Diego golf course data (latitude, longitude, name, city)
 courses = [
